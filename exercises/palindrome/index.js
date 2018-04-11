@@ -7,6 +7,13 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+function palindrome(str) {
+	// Array.prototype.every -- is used to do a boolean check on every element within an array
+	// arr.every((val) => val > 5);
+	// If any function returns false, then the overall expression returns false as well
+	return str.split('').every((char,i) => {
+		return char === str[str.length -i -1]; // mirrored element
+	});
+}
 
 module.exports = palindrome;
